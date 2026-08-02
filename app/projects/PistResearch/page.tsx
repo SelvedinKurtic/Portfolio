@@ -45,7 +45,7 @@ export default function LabAutomationPage() {
     },
     {
       date: "Failure Analysis",
-      title: "Empirical Performance Drops & Sizing Metrics",
+      title: "Performance Drops & Sizing Metrics",
       badge: "Results & Testing",
       badgeColor: "bg-red-50 text-red-700 border-red-200",
       image: "/projects/PistResearch/figure4.jpeg",
