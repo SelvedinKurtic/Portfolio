@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ChevronDown, Linkedin, Github } from 'lucide-react';
+import { ChevronDown, Linkedin, Github, FileText } from 'lucide-react';
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -39,14 +39,14 @@ export default function Hero() {
             I enjoy building things and figuring out how they work. Whether it's designing hardware, writing code, or working on research, I like taking on projects that teach me something new.
           </motion.p>
 
-          {/* Responsive Action Buttons Row */}
+          {/* Clean, Non-Busy Action Buttons Row */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.8, delay: 0.6 }} 
             className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap"
           >
-            {/* Local Scroll Triggers */}
+            {/* 🎯 Primary Core Action: Local Scroll To Projects */}
             <button 
               onClick={() => scrollToSection('#projects')} 
               className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 cursor-pointer shadow-sm"
@@ -54,16 +54,20 @@ export default function Hero() {
               View Projects
             </button>
 
-            <button 
-              onClick={() => scrollToSection('#contact')} 
-              className="w-full sm:w-auto px-8 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 cursor-pointer"
-            >
-              Get In Touch
-            </button>
-
-            {/* LinkedIn External Profile Link Button */}
+            {/* 📄 NEW: Interactive Resume PDF Action Link */}
             <a
-              href="https://www.linkedin.com/in/selvedin-kurtic/" // If you copy this website, replace this with your own LinkedIn URL
+              href="/Resume.pdf" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 transform hover:scale-105 cursor-pointer"
+            >
+              <FileText size={18} className="text-orange-500 dark:text-red-500" />
+              <span>View Resume</span>
+            </a>
+
+            {/* 💼 LinkedIn External Profile Link Button */}
+            <a
+              href="https://www.linkedin.com/in/selvedin-kurtic/" // 👈 Swap with your active URL path
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#0077b5] text-white font-semibold rounded-lg hover:bg-[#006297] transition-all duration-200 transform hover:scale-105 shadow-sm"
@@ -72,9 +76,9 @@ export default function Hero() {
               <span>LinkedIn</span>
             </a>
 
-            {/* GitHub Repository Link Button */}
+            {/* 📦 GitHub Repository Link Button */}
             <a
-              href="https://github.com/SelvedinKurtic" // If you copy this website, replace this with your own Github URL
+              href="https://github.com/SelvedinKurtic/" // 👈 Swap with your active URL path
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 dark:bg-slate-800 text-white border border-slate-800 dark:border-slate-700 font-semibold rounded-lg hover:bg-black dark:hover:bg-slate-700 transition-all duration-200 transform hover:scale-105 shadow-sm"
@@ -87,6 +91,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
+      {/* Bouncing down indicator arrow */}
       <motion.div 
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }} 

@@ -11,7 +11,7 @@ const experiences = [
     icon: FlaskConical,
     iconColor: 'bg-blue-600 text-white',
     bullets: [
-      'Investigated the mechanical viability of processing pistachio shell agricultural byproducts as sustainable eco-filler materials in Low-Density Polyethylene (LDPE) matrices.',
+      'Process and incorporate eco-friendly, bio-based materials into LDPE (low-density polyethylene) systems to support sustainable material development.',
       'Formulated multi-mesh sieve sorting criteria (63µm, 125µm, 250µm) and operated laboratory mixing extruders alongside injection molding equipment to fabricate standardized dog-bone tensile test specimens.',
       'Conducted over 600 independent mechanical stress trials utilizing an Instron 68TM-30 Universal Testing Machine to chart Elastic modulus, tensile strength, and elongation behaviors.'
     ]
