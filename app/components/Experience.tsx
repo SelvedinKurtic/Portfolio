@@ -65,7 +65,7 @@ export default function Experience() {
         </motion.div>
 
         {/* Timeline Stack Layout Container */}
-        <div className="relative border-l-2 border-gray-200 dark:border-gray-700 -ml-12 md:-ml-24 space-y-12">
+        <div className="relative border-l-2 border-gray-200 dark:border-gray-700 ml-0 sm:-ml-8 md:-ml-24 space-y-12">
           {experiences.map((exp, index) => (
             <motion.div 
               key={exp.role} 

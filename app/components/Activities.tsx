@@ -35,7 +35,7 @@ const activityData = [
     company: 'X-Academy - Watsonville, CA',
     duration: 'February 2026 - Present',
     icon: School,
-    iconColor: 'bg-purple-600 text-white',
+    iconColor: 'bg-pink-600 text-white',
     bullets: [
       'Assisted a team of 20 students in defining mission objectives and project goals.',
       'Supported the development, testing, and iteration of ROV prototypes.',
@@ -66,7 +66,7 @@ export default function Activities() {
         </motion.div>
 
         {/* Continuous track timeline line that perfectly aligns with your career path */}
-        <div className="relative border-l-2 border-gray-200 dark:border-gray-700 -ml-12 md:-ml-24 space-y-12">
+        <div className="relative border-l-2 border-gray-200 dark:border-gray-700 ml-0 md:-ml-24 space-y-12">
           {activityData.map((act, index) => (
             <motion.div 
               key={act.role} 
