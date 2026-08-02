@@ -44,7 +44,8 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+    /* 🚀 FIXED: Swapped section background to match Technical Skills exactly */
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700/60">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -67,11 +68,11 @@ export default function Experience() {
         <div className="relative border-l-2 border-gray-200 dark:border-gray-700 -ml-12 md:-ml-24 space-y-12">
           {experiences.map((exp, index) => (
             <motion.div 
-              key={exp.role}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              key={exp.role} 
+              initial={{ opacity: 0, x: -20 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              transition={{ duration: 0.5, delay: index * 0.1 }} 
+              viewport={{ once: true }} 
               className="relative pl-6 group"
             >
               
@@ -80,8 +81,8 @@ export default function Experience() {
                 <exp.icon size={18} />
               </div>
 
-              {/* Experience Card */}
-              <div className="bg-gray-50 dark:bg-gray-800 border border-gray-100 dark:border-gray-700/60 rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
+              {/* 🚀 FIXED: Experience Card flipped to white / dark slate layers to jump out cleanly against the gray page layer */}
+              <div className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-all">
                 
                 {/* Meta Layout Title Block */}
                 <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2">
@@ -90,12 +91,12 @@ export default function Experience() {
                       {exp.role}
                     </h3>
                     <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm [font-kerning:none]">
-                     {exp.company}
+                      {exp.company}
                     </p>
                   </div>
                   
                   {/* Duration Badge Element */}
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white dark:bg-gray-900 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700 text-xs font-semibold rounded-full shadow-sm whitespace-nowrap self-start">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-700 text-xs font-semibold rounded-full shadow-sm whitespace-nowrap self-start">
                     <Calendar size={12} />
                     {exp.duration}
                   </div>
