@@ -1,29 +1,32 @@
-import { ReactNode } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ThemeModal from './components/ThemeModal';
-// Replace your old import with this:
-import './globals.css'; 
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import '@/app/globals.css';
+import BottomChaser from './components/BottomChaser';
 
+export const metadata: Metadata = {
+  title: 'Selvedin Kurtic | Mechatronics Portfolio',
+  // SEO tracking parameters
+};
 
-interface RootLayoutProps {
-  children: ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+      <head>
+        <Script
+          async
+          src="https://googlesyndication.com"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body className="antialiased relative">
+        <BottomChaser />
         
-        {/* Mount these globally inside the body container frame */}
-        <ThemeModal />
-        <Navbar />
-        
-        <main className="relative">
-          {children}
-        </main>
-        
-        <Footer />
+        {children}
       </body>
     </html>
   );

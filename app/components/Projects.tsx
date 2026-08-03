@@ -66,7 +66,7 @@ export default function Projects() {
                     {/* Translucent overlay that fades in smoothly on mouse hover */}
                     <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 flex flex-col items-center justify-center transition-all p-4 text-center z-10">
                       <span className="text-white text-xs font-bold tracking-wider uppercase bg-slate-900/80 backdrop-blur-sm px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 shadow-md transition-all transform translate-y-1 group-hover:translate-y-0">
-                        📸 View Case Study
+                        View Project
                       </span>
                     </div>
                   </div>
